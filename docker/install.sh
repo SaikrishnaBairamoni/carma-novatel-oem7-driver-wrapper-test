@@ -23,7 +23,6 @@ if [[ ! -z "$ROS2_PACKAGES" ]]; then
 else
     echo "Sourcing base image for full build..."
     source /opt/ros/humble/setup.bash
-    source /home/carma/catkin/setup.bash
 fi
 
 
@@ -31,9 +30,5 @@ fi
 if [[ ! -z "$ROS2_PACKAGES" ]]; then
     colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release --packages-above $ROS2_PACKAGES
 else
-    # Install dependencies
-    sudo apt-get update
-    rosdep update
-    rosdep install --from-paths src --ignore-src -r -y
     colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release
 fi
