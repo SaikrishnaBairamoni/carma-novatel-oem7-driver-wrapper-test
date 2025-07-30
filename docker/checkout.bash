@@ -37,8 +37,8 @@ while [[ $# -gt 0 ]]; do
       esac
 done
 
-sudo git clone https://github.com/usdot-fhwa-stol/carma-msgs.git ${dir}/src/CARMAMsgs --branch $BRANCH
-sudo git clone https://github.com/usdot-fhwa-stol/carma-utils.git ${dir}/src/CARMAUtils --branch $BRANCH
+sudo git clone https://github.com/SaikrishnaBairamoni/carma-msgs-test ${dir}/src/CARMAMsgs --branch $BRANCH
+sudo git clone https://github.com/SaikrishnaBairamoni/carma-utils-test.git ${dir}/src/CARMAUtils --branch $BRANCH
 
 
 # novatel driver
